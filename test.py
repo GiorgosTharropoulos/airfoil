@@ -10,11 +10,6 @@ class Point:
         self.x = x
         self.y = y
 
-
-
-    def x_angle(self, other):
-        pass
-
     def __repr__(self) -> str:
         return f"x: {self.x}, y: {self.y}"
 
@@ -25,12 +20,15 @@ class Element:
         self.node2 = node2
 
     def length(self):
-        return math.sqrt((self.node1.x - self.node2.x) ** 2 + (self.node1.y - self.node2.y) **  2)
+        return math.sqrt(
+            (self.node1.x - self.node2.x) ** 2
+            + (self.node1.y - self.node2.y) ** 2
+        )
 
     def angle(self):
-        dx=self.node2.x-self.node1.x
-        dy=self.node2.y-self.node1.y
-        return math.degrees(math.atan(dx/dy))
+        dx = self.node2.x - self.node1.x
+        dy = self.node2.y - self.node1.y
+        return math.degrees(math.atan(dx / dy))
 
     def plot(self):
         plt.plot([self.node1.x, self.node2.x], [self.node1.y, self.node2.y])
@@ -40,9 +38,9 @@ class Element:
 if __name__ == "__main__":
     points = [Point(0, 1), Point(0, 3)]
 
-    p1  = Point(2,6)
-    p2 = Point(5,7)
-    elmnt1 = Element(p1,p2)
+    p1 = Point(2, 6)
+    p2 = Point(5, 7)
+    elmnt1 = Element(p1, p2)
 
     print(elmnt1.length())
     print(elmnt1.angle())
