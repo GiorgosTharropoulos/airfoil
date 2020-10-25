@@ -10,7 +10,8 @@ class TxtReader:
         https://stackoverflow.com/questions/1614236/in-python-how-do-i-convert-all-of-the-items-in-a-list-to-floats
 
         Returns:
-            [float array]: [description]
+            [float array]: [Array of floats for x coordinate]
+            [float array]: [Array of floats for y coordinate]
         """
         chi = []
         psi = []
